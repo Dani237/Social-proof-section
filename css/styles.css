@@ -1,0 +1,188 @@
+:root {
+    --d-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+
+    --g-magenta: hsl(303, 10%, 53%);
+    --l-magenta: hsl(300, 24%, 96%);
+
+    --principal-font: 'League Spartan', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: var(--principal-font);
+}
+h1, h5 {
+    margin: 0;
+}
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 100.5rem;
+    margin: 0  auto;
+}
+
+/* FIRST BLOCK */
+
+.first-block {
+    margin-top: 10rem;
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* DATA */
+
+.data {
+    max-width: 38rem;
+}
+.main-title {
+    color: var(--d-magenta);
+    font-size: 4.3rem;
+    font-weight: bold;
+    line-height: .8;
+    margin-bottom: 2.5rem;
+}
+.main-text {
+    color: var(--g-magenta);
+    font-weight: 500;
+}
+
+/* RATED */
+
+.rated {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.stars {
+    background-image: url(../images/icon-star.svg);
+    transform: scale(.9);
+    background-repeat: space;
+    width: 10rem;
+    height: 16px;
+}
+.rated-content {
+    display: flex;
+    gap: 2rem;
+    padding: 1.4rem 3rem 1.4rem 3rem;
+    background-color: var(--l-magenta);
+    border-radius: .6rem;
+    width: 38rem;
+}
+.rated-content:nth-child(2) {
+    margin-left: 4rem;
+}
+.rated-content:nth-child(3) {
+    margin-left: 8rem;
+}
+.rated-text {
+    color: var(--d-magenta);
+    font-weight: bold;
+}
+
+/* TESTIMONIALS */
+
+.testimonials {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+.card {
+    background-color: var(--d-magenta);
+    padding: 3rem;
+    color: white;
+    border-radius: .8rem;
+    height: 20rem;
+}
+.card:nth-child(2) {
+    margin-top: 2rem;
+}
+.card:nth-child(3) {
+    margin-top: 4rem;
+}
+.card-header {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.6rem;
+    align-items: center;
+}
+.photo img {
+    width: 4rem;
+    border-radius: 50%;
+}
+.description h5,
+.t.text {
+    color: var(--l-magenta);
+}
+.description p {
+    color: var(--soft-pink);
+    margin: 0;
+}
+
+
+/* FOOTER */
+footer {
+    text-align: center;
+}
+.attribution {
+    margin-top: 15rem;
+    margin-bottom: 3rem;
+}
+a {
+    text-decoration: none;
+    color: var(--soft-pink);
+}
+
+@media (max-width: 375px) {
+    .container {
+        max-width: 85%;
+    }
+    .first-block {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 6rem;
+        gap: 2rem;
+    }
+    .rated {
+        align-items: center;
+
+    }
+    .rated-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        max-width: 80%;
+    }
+    .stars {
+        width: 10rem;
+    }
+    .rated-content:nth-child(2) {
+        margin-left: 0;
+    }
+    .rated-content:nth-child(3) {
+        margin-left: 0;
+    }
+    .testimonials {
+        flex-direction: column;
+        margin-top: 4rem;
+    }
+    .card:nth-child(2) {
+        margin-top: 0;
+    }
+    .card:nth-child(3) {
+        margin-top: 0;
+    }
+}
